@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sri-lanka-map {
+    width: 27%;
+}
+
+.sri-lanka-map path {
+    fill: gray;
+}
+
+.sri-lanka-map path:hover {
+    fill: rgba(0, 0, 0, 0.267);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+/* .sri-lanka-map #LKA2448 {
+    fill: red;
+} */
