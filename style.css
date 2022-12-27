@@ -5,44 +5,67 @@
     font-family: 'poppins', sans-serif;
 }
 
-html {
-    background: linear-gradient(to right, #457fca, #5691c8);
-    background: lightblue;
-    height: 100vh;
-    width: 100%;
+a {
+    color: inherit;
+    text-decoration: underline;
 }
 
-body {
-    width: 100vw;
+body { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* background: linear-gradient(to right, #457fca, #5691c8); */
+    background: lightblue;
     height: 100vh;
+    justify-content: space-between;
+    /* width: 100vw; */
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    /* min-height: 100%; */
 }
 
 .topnav {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    /* width: 100%; */
-    /* justify-content: space-evenly; */
-    /* align-items: center; */
+    justify-content: center;
     background-color: white;
     color: rebeccapurple;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-    /* padding: 0.5rem; */
-    /* height: auto; */
-    /* max-height: 10%; */
-    /* width: 100%; */
-    height: 5vh;
+    max-width: 100%;
+}
+
+.topnav h1 {
+    max-width: 15em;
+    font-size: clamp(0.75rem,  5vw, 1.5rem);
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: rebeccapurple;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    max-width: 100%;
+}
+
+footer h1 {
+    max-width: 20em;
+    font-size: clamp(0.75rem,  5vw, 1rem);
+    text-align: center;
 }
 
 .name {
     display: flex;
     align-items: center;
-    /* background-color: rgb(173, 92, 92); */
+    justify-content: center;
 }
 
 .name img {
-    width: 10%;
-    height: auto;
+    max-width: 10%;
+    /* height: auto; */
     margin-left: 7px;
 }
 
@@ -50,7 +73,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    min-height: 95vh;
+    min-height: 86%;
+    background-color: red;
 }
 
 .info-section {
@@ -58,7 +82,8 @@ body {
     /* justify-content: center;
     align-items: center; */
     /* height: 800px; */
-    height: 50rem;
+    /* height: 85vh; */
+    height: 98%;
     width: 40%;
     background-color: white;
     /* margin-left: 5rem; */
@@ -68,8 +93,8 @@ body {
 .details-container {
     background-color: lightgoldenrodyellow;
     /* min-height: 90%; */
-    max-height: 90%;
-    height: 90%;
+    /* max-height: 100%; */
+    height: 90.5%;
     display: flex;
     flex-direction: column;
     /* justify-content: space-evenly; */
@@ -87,7 +112,7 @@ body {
 
 .city-name {
     /* background-color: green; */
-    font-size: 3rem;
+    font-size: 2.2rem;
     margin-top: 2%;
     margin-bottom: 1%;
     margin-left: auto;
@@ -108,7 +133,7 @@ body {
 }
 
 .aqi-text, .level-text{
-    font-size: 2rem;
+    font-size: 1.75rem;
     background-color: green;
     padding-left: 3%;
     padding-right: 3%;
@@ -130,10 +155,10 @@ body {
 .description {
     display: flex;
     flex-direction: column;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-align: center;
     height: 350px;
-    background-color: #04AA6D;
+    /* background-color: #04AA6D; */
     justify-content: space-evenly;
     /* padding-left: 6%;
     padding-right: 6%; */
@@ -163,7 +188,7 @@ td, th {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 th {
@@ -171,13 +196,13 @@ th {
     padding-bottom: 12px;
     background-color: #04AA6D;
     color: white;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .disclaimer {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 8%;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -189,8 +214,9 @@ th {
     padding: 0.75rem;
     background-color: green;
     border-radius: 3rem;
-    width: 720px;
-    height: 800px;
+    /* width: 720px; */
+    width: 40%;
+    height: 85vh;
 }
 
 .level-list {
@@ -201,7 +227,8 @@ th {
     align-self: center;
     /* background-color: rgb(197, 120, 120); */
     height: 75%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
+    
 }
 
 .l1, .l2, .l3, .l4, .l5, .l6 {
@@ -236,9 +263,9 @@ th {
 }
 
 svg {
-    width: 600px;
+    width: 28rem;
     /* height: 750px; */
-    height: 50rem;
+    /* height: 50rem; */
 }
 
 svg * {
