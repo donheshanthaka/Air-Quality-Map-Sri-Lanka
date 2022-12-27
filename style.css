@@ -328,7 +328,7 @@ svg * {
     cursor: pointer;
 }
 
-
+/* Tabs and Mobile Resolution */
 @media (max-width: 1050px) {
 
     html,
@@ -393,5 +393,151 @@ svg * {
 
     footer h1 {
         font-size: clamp(0.75rem,  5vw, 0.8rem);
+    }
+}
+
+/* 1440P Resolution */
+@media (min-width: 2560px) {
+
+    .topnav h1 {
+        font-size: clamp(0.75rem,  5vw, 2.5rem);
+    }    
+
+    .main-container {
+        background-color: blue;
+    }
+
+    .info-section {
+        border-radius: 6rem;
+    }
+
+    .details-container {
+        border-radius: 0rem 0rem 6rem 6rem;
+    }
+
+    .city-container {
+        border-radius: 6rem 6rem 0rem 0rem;
+    }
+
+    .city-name {
+        font-size: clamp(0.5rem,  6vw, 4.4rem);
+    }
+
+    .aqi-text, .level-text{
+        font-size: clamp(0.75rem,  3vw, 2.5rem);
+    }
+
+    .guide {
+        font-size: clamp(0.75rem,  2vw, 2.8rem);
+    }
+
+    .description {
+        font-size: clamp(0.7rem, 1.2vw, 2.25rem);
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+    }
+
+    td, th {
+        padding: 0.7rem;
+        font-size: clamp(0.5rem,  1vw, 1.5rem);
+    }
+    
+    th {
+        font-size: clamp(0.4rem,  0.8vw, 1.7rem);
+    }
+
+    .disclaimer {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .map-box {
+        border-radius: 6rem;
+    }
+
+    .l1, .l2, .l3, .l4, .l5, .l6 {
+        width: 30px;
+    }
+
+    svg {
+        width: 74%;
+    }
+
+    footer h1 {
+        font-size: clamp(0.75rem,  5vw, 2rem);
+    }
+}
+
+/* 4K Resolution */
+@media (min-width: 3840px) {
+
+    .topnav h1 {
+        font-size: clamp(0.75rem,  5vw, 3.8rem);
+    }    
+
+    .main-container {
+        background-color: orange;
+    }
+
+    .info-section {
+        border-radius: 9rem;
+    }
+
+    .details-container {
+        border-radius: 0rem 0rem 9rem 9rem;
+    }
+
+    .city-container {
+        border-radius: 9rem 9rem 0rem 0rem;
+    }
+
+    .city-name {
+        font-size: clamp(0.5rem,  6vw, 6rem);
+    }
+
+    .aqi-text, .level-text{
+        font-size: clamp(0.75rem,  3vw, 3.5rem);
+    }
+
+    .guide {
+        font-size: clamp(0.75rem,  2vw, 3.8rem);
+    }
+
+    .description {
+        font-size: clamp(0.7rem, 1.2vw, 2.5rem);
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    td, th {
+        padding: 0.7rem;
+        font-size: clamp(0.5rem,  1vw, 2rem);
+    }
+    
+    th {
+        font-size: clamp(0.4rem,  0.8vw, 2rem);
+    }
+
+    .disclaimer {
+        font-size: 1.6rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .map-box {
+        border-radius: 9rem;
+    }
+
+    .l1, .l2, .l3, .l4, .l5, .l6 {
+        width: 40px;
+    }
+
+    svg {
+        width: 65%;
+    }
+
+    footer h1 {
+        font-size: clamp(0.75rem,  5vw, 3rem);
     }
 }
