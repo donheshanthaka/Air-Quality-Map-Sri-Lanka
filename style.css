@@ -159,7 +159,7 @@ footer h1 {
     display: flex;
     flex-direction: column;
     /* font-size: .8rem; */
-    font-size: clamp(0.5rem,  1vw, 1rem);
+    font-size: clamp(0.8rem,  1vw, 1rem);
     text-align: center;
     /* height: 350px; */
     height: 48%;
@@ -329,13 +329,69 @@ svg * {
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1050px) {
 
-    .body {
-        min-height: 100vh;
+    html,
+    body {
+        height:auto!important;
+        min-height:100vh;
+        min-width: 100vw;
     }
+
     .main-container {
+        margin: 5% 0;
         flex-direction: column-reverse;
-        min-height: 86%;
+        min-height: auto;
+    }
+
+    .map-box {
+        margin-bottom: 2.5%;
+        width: 90%;
+    }
+
+    .level-list {
+        height: 40vh;
+    }
+
+    .l1, .l2, .l3, .l4, .l5, .l6 {
+        width: 10px;
+    }
+
+    .info-section {
+        width: 90%;
+        height: auto;
+    }
+
+    .city-name {
+        font-size: clamp(0.5rem,  6vw, 2.2rem);
+        margin-bottom: 2%;
+    }
+
+    .aqi-text, .level-text{
+        font-size: clamp(0.75rem,  3vw, 1.9rem);
+    }
+
+    .guide {
+        margin-bottom: 4%;
+    }
+    
+    .description {
+        font-size: clamp(0.7rem, 1.2vw, 1.25rem);
+        height: auto;
+        margin: auto;
+    }
+
+    .description li {
+        padding-bottom: 4%;
+    }
+
+    .disclaimer {
+        font-size: 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    footer h1 {
+        font-size: clamp(0.75rem,  5vw, 0.8rem);
     }
 }
