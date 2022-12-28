@@ -13,16 +13,9 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /* background: linear-gradient(to right, #457fca, #5691c8); */
-    /* background: lightblue; */
     background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
     height: 100vh;
     justify-content: space-between;
-    /* width: 100vw; */
-    /* margin: 0 auto; */
-    /* text-align: center; */
-    /* vertical-align: middle; */
-    /* min-height: 100%; */
 }
 
 a {
@@ -31,7 +24,6 @@ a {
 }
 
 .loader {
-    /* background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%); */
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -88,7 +80,6 @@ a {
 
 .topnav h1 {
     max-width: 15em;
-    /* font-size: clamp(0.75rem,  5vw, 1.5rem); */
     font-size: 1.5vw;
     text-align: center;
 }
@@ -105,7 +96,6 @@ footer {
 
 footer h1 {
     max-width: 20em;
-    /* font-size: clamp(0.75rem,  5vw, 1rem); */
     font-size: 1.25vw;
     text-align: center;
 }
@@ -118,7 +108,6 @@ footer h1 {
 
 .name img {
     max-width: 10%;
-    /* height: auto; */
     margin-left: 7px;
 }
 
@@ -127,19 +116,12 @@ footer h1 {
     align-items: center;
     justify-content: space-evenly;
     height: 86%;
-    /* background-color: red; */
 }
 
 .info-section {
     display: inline-block;
-    /* justify-content: center;
-    align-items: center; */
-    /* height: 800px; */
-    /* height: 85vh; */
     height: 95%;
     width: 40%;
-    /* background-color: white; */
-    /* margin-left: 5rem; */
     border-radius: 3rem;
     background: rgba(255, 255, 255, .1);
     box-shadow: 0 25px 45px rgba(0 , 0, 0, .2);
@@ -150,58 +132,43 @@ footer h1 {
 }
 
 .details-container {
-    /* background-color: lightgoldenrodyellow; */
-    /* height: 90.5%; */
     height: 90%;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     border-radius: 0rem 0rem 3rem 3rem;
 }
 
 .city-container {
     height: 10%;
-    /* background-color: rebeccapurple; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-top: 2.5rem; */
     border-radius: 3rem 3rem 0rem 0rem;
-    /* background-color: rgba(255, 70, 70, 0.349); */
-    /* background-color: #009966a9; */
     background: rgba(255, 255, 255, .1);
     border-bottom: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(10px);
-    /* width: auto; */
 }
 
 .city-name {
-    /* background-color: green; */
-    /* font-size: clamp(0.75rem,  5vw, 2.2rem); */
     font-size: 2.5vw;
-    /* font-size: 2.2rem; */
     margin-top: 2%;
     margin-bottom: 1%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 3%;
     padding-right: 3%;
-    /* border-radius: 2rem; */
 }
 
 .aqi-box {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* background-color: rgb(139, 65, 65); */
-    /* margin-top: 2.5%; */
     margin-top: 4%;
     margin-bottom: 4%;
     width: 100%;
 }
 
 .aqi-text, .level-text{
-    /* font-size: clamp(0.75rem,  1.5vw, 1.75rem); */
     font-size: 1.25vw;
     background-color: green;
     padding-left: 3%;
@@ -210,15 +177,10 @@ footer h1 {
 }
 
 .guide {
-    /* font-size: clamp(0.75rem,  2vw, 1.5rem); */
     font-size: 1.7vw;
-    /* background-color: rebeccapurple; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin-bottom: 5%; */
-    /* font-size: 1.5rem; */
-    /* margin-top: 2%; */
     background: rgba(255, 255, 255, .1);
     border-top: 2px solid rgba(255, 255, 255, .2);
     border-bottom: 2px solid rgba(255, 255, 255, .2);
@@ -228,17 +190,10 @@ footer h1 {
 .description {
     display: flex;
     flex-direction: column;
-    /* font-size: .8rem; */
-    /* font-size: clamp(0.8rem,  1vw, 1rem); */
     font-size: 1vw;
     text-align: center;
-    /* height: 350px; */
     height: 48%;
-    /* background-color: #04AA6D; */
     justify-content: space-evenly;
-    /* padding-left: 6%;
-    padding-right: 6%; */
-    /* margin: auto; */
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -246,7 +201,6 @@ footer h1 {
 }
 
 .description li {
-    /* padding-bottom: 4%; */
     width: 95%;
     margin-left: auto;
     margin-right: auto;
@@ -257,35 +211,24 @@ table {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    /* font-size: 1.25rem; */
 }
 
 td, th {
     border: 1px solid #ddd;
-    /* padding: 8px; */
     padding: 0.4rem;
     text-align: center;
-    /* font-size: clamp(0.5rem,  1vw, 0.8rem); */
     font-size: 1vw;
-    /* font-size: 0.9rem; */
 }
 
 th {
-    /* padding-top: 12px;
-    padding-bottom: 12px; */
-    /* background-color: #04AA6D; */
     background: rgba(255, 255, 255, .1);
     color: white;
-    /* font-size: clamp(0.4rem,  0.8vw, 0.9rem); */
     font-size: 0.8vw;
-    /* font-size: 0.8rem; */
 }
 
 .disclaimer {
-    /* font-size: 0.6rem; */
     font-size: 0.5vw;
     text-align: center;
-    /* margin-top: 8%; */
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -297,11 +240,8 @@ th {
     display: flex;
     justify-content: space-evenly;
     padding: 0.75rem;
-    /* background-color: green; */
     border-radius: 3rem;
-    /* width: 720px; */
     width: 40%;
-    /* height: 85vh; */
     height: 95%;
     background: rgba(255, 255, 255, .1);
     box-shadow: 0 25px 45px rgba(0 , 0, 0, .2);
@@ -315,13 +255,9 @@ th {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* align-items: center; */
     align-self: center;
-    /* background-color: rgb(197, 120, 120); */
     height: 75%;
-    /* margin-left: 10%; */
     margin: 0rem 1rem;
-    
 }
 
 .l1, .l2, .l3, .l4, .l5, .l6 {
@@ -358,8 +294,6 @@ th {
 svg {
     width: 28;
     width: auto;
-    /* height: 750px; */
-    /* height: 50rem; */
 }
 
 svg * {
@@ -369,12 +303,9 @@ svg * {
 
 .sri-lanka-map {
     height: 100%;
-    /* margin: 0 5rem; */
-
 }
 
 .sri-lanka-map path {
-    /* fill: gray; */
     stroke: rgb(1, 34, 78);
     fill: rgba(255, 255, 255, .1);
 }
@@ -458,6 +389,7 @@ svg * {
 
     .guide {
         margin-bottom: 4%;
+        font-size: clamp(0.9rem, 3vw, 1.25rem);
     }
     
     .description {
@@ -481,7 +413,7 @@ svg * {
     }
 
     .disclaimer {
-        font-size: 0.5rem;
+        font-size: 0.4rem;
         margin-top: 1rem;
         margin-bottom: 2rem;
     }
