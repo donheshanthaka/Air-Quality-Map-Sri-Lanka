@@ -1,31 +1,3 @@
-// Selectors
-const sriLankaMap = document.querySelector('.sri-lanka-map');
-console.log(sriLankaMap.innerHTML);
-
-// Event Listners
-sriLankaMap.addEventListener('click', (e) => {
-    const id = e.explicitOriginalTarget.id;
-    // console.log(e.explicitOriginalTarget.id);
-    if (id in locations){
-        console.log(`${locations[id].name}`);
-        fetchAirQuality(locations[id].geo);
-        // console.log(locations[id].geo);
-    }
-});
-
-const fetchAirQuality = async ({lat, lon}) => {
-    const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=dbfaf51630859f71e4864ba512db6615`;
-    const response = await axios.get(url);
-    // console.log(response.data.list[0].components.pm2_5)
-    const pm25_aqi = pm25(response.data.list[0].components.pm2_5);
-    const label = aqi_label(pm25_aqi);
-    console.log(`US-AQI: ${pm25_aqi} Label: ${label}`);
-    // console.log(response);
-
-}
-
-
-
 const locations = {
     LKA2448: {
         name: 'Kandy',
@@ -124,7 +96,96 @@ const locations = {
         geo: {lat: '7.0840', lon: '80.0098'}
     },
     LKA2472: {
-        name: 'Gampaha',
+        name: 'Kalutara',
         geo: {lat: '6.5854', lon: '79.9607'}
     }
 }
+
+const populateMap = async (locations) => {
+    const style = document.createElement('style');
+    style.appendChild(document.createTextNode(''));
+    document.head.appendChild(style);
+    for (let location in locations){
+        const components = await fetchAirQuality(locations[location].geo);
+        locations[location].data = [];
+        for (let component in components) {
+            locations[location].data.push(components[component]);
+        };
+        const aqi = pm25(components.pm2_5);
+        const label = aqi_label(aqi);
+        const color = aqi_color(aqi);
+        style.sheet.insertRule(`#${location}{fill:#${color};}`,0);
+        locations[location].aqi = aqi;
+        locations[location].label = label;
+    };
+    return true;
+}
+
+const updateInfo = (id) => {
+    if (id in locations){
+        const name = locations[id].name;
+        const aqi = locations[id].aqi;
+        const label = locations[id].label;
+        const data = locations[id].data;
+        cityName.textContent = name;
+        aqiText.textContent = `AQI: ${aqi}`;
+        const color = aqi_color(aqi);
+        aqiTextBox.style.backgroundColor = `#${color}`;
+        aqiLevelBox.style.backgroundColor = `#${color}`;
+        if (label === 'Moderate') {
+
+            aqiTextBox.style.color = 'rebeccapurple';
+            aqiLevelBox.style.color = 'rebeccapurple';
+        } else {
+            aqiTextBox.style.color = 'white';
+            aqiLevelBox.style.color = 'white';
+        }
+        levelText.textContent = `LEVEL: ${label}`;
+        const guidelines = aqi_guidelines(aqi);
+        description.innerHTML = '';
+        guidelines.forEach((guideline) => {
+            const text = document.createElement('li')
+            text.innerText = guideline;
+            description.appendChild(text);
+        });
+        rows.innerHTML = '';
+        data.forEach((component) => {
+            // console.log(component);
+            const text = document.createElement('td')
+            text.innerText = component;
+            rows.appendChild(text);
+        });
+    }
+}
+
+const fetchAirQuality = async ({lat, lon}) => {
+    const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=dbfaf51630859f71e4864ba512db6615`;
+    const response = await axios.get(url);
+    return response.data.list[0].components;
+}
+
+// Selectors
+const sriLankaMap = document.querySelector('.sri-lanka-map');
+const cityName = document.querySelector('.city-name');
+const aqiText = document.querySelector('.aqi-text');
+const aqiTextBox = document.querySelector('.aqi-text');
+const aqiLevelBox = document.querySelector('.level-text');
+const levelText = document.querySelector('.level-text');
+const description = document.querySelector('.description');
+const rows = document.querySelector('.table-rows');
+
+// Event Listners
+sriLankaMap.addEventListener('click', (e) => {
+    const id = e.target.id;
+    updateInfo(id);
+});
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const loader = document.querySelector(".loader");
+    await populateMap(locations);
+    updateInfo('LKA2470');
+    loader.classList.add("loader--hidden");
+    // loader.addEventListener("transitionend", () => {
+    //     document.body.removeChild(loader);
+    // });
+});
